@@ -1,0 +1,27 @@
+<h1>Listing Forms</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Summary</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @forms.each do |form| %>
+      <tr>
+        <td><%= form.author.fullname %></td>
+        <td><%= form.type.label %></td>
+        <td><%= link_to "Show", form %></td>
+        <td><%= link_to "Remove", form, method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New Form", new_form_path %>
