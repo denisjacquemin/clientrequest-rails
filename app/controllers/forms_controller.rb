@@ -1,7 +1,11 @@
 class FormsController < ApplicationController
   def show
-    @form = Form.find_by_uid(params[:formid])
+    @form = Form.find_by_uid(params[:uid])
     render @form.form_type.filename
+  end
+
+  def new
+    @form = Form.new
   end
 
   def create
@@ -13,4 +17,5 @@ class FormsController < ApplicationController
   def index
     @forms = Form.all
   end
+
 end

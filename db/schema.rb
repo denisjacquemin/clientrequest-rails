@@ -11,21 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151123061148) do
+ActiveRecord::Schema.define(version: 20151123180653) do
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "form_types", force: :cascade do |t|
-    t.string   "filename"
     t.string   "label"
+    t.string   "filename"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "forms", force: :cascade do |t|
     t.string   "uid"
-    t.integer  "form_type_id"
+    t.integer  "type_id"
     t.integer  "author_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,6 +61,7 @@ ActiveRecord::Schema.define(version: 20151123061148) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.integer  "invitations_count",      default: 0
+    t.integer  "company_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

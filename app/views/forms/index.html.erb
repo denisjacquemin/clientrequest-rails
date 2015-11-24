@@ -1,27 +1,41 @@
-<h1>Listing Forms</h1>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Summary</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @forms.each do |form| %>
-      <tr>
-        <td><%= form.author.fullname %></td>
-        <td><%= form.type.label %></td>
-        <td><%= link_to "Show", form %></td>
-        <td><%= link_to "Remove", form, method: :delete, data: { confirm: "Are you sure?" } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to "New Form", new_form_path %>
+<div class="container">
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">Listing Forms
+              <small>Subheading</small>
+          </h1>
+          <ol class="breadcrumb">
+              <li><%= link_to 'Home', root_path %>
+              </li>
+              <li class="active">Contact</li>
+          </ol>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Summary</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @forms.each do |form| %>
+            <tr>
+              <td><%= form.author.name %></td>
+              <td><%= form.type.label %></td>
+              <td><%= link_to "Show", form %></td>
+              <td><%= link_to "Remove", form, method: :delete, data: { confirm: "Are you sure?" } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <%= link_to "New Form", new_form_path, class: 'btn btn-primary' %>
+    </div>
+  </div>
