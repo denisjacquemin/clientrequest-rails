@@ -5,11 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Company.create(name: 'Company 1')
+Company.create(name: 'Company 2')
+
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
 FormType.create(label: 'Formulaire 1', filename: 'form1')
 FormType.create(label: 'Formulaire 2', filename: 'form2')
 
-Form.create(uid: 'klj45lkjlk4j5566#292', type_id: 1, author_id: 1)
-Form.create(uid: 'klioiofdoidf@!66#292', type_id: 2, author_id: 1)
+Form.create(uid: 'klj45lkjlk4j5566#292', type_id: 1, author_id: 1, company_id: 1)
+Form.create(uid: 'klioiofdoidf@!66#292', type_id: 2, author_id: 1, company_id: 1)
