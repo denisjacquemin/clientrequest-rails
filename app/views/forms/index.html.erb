@@ -16,26 +16,20 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Author</th>
+            <th>Auteur</th>
             <th>Summary</th>
             <th></th>
             <th></th>
             <th></th>
           </tr>
         </thead>
-        <tbody>
-          <% @forms.each do |form| %>
-            <tr>
-              <td><%= form.author.name %></td>
-              <td><%= form.type.label %></td>
-              <td><%= link_to "Show", form %></td>
-              <td><%= link_to "Remove", form, method: :delete, data: { confirm: "Are you sure?" } %></td>
-            </tr>
-          <% end %>
+        <tbody id="forms">
+          <%= render "forms" %>
         </tbody>
       </table>
     </div>
     <div class="col-md-4">
-      <%= link_to "New Form", new_form_path, class: 'btn btn-primary' %>
+      <div id="modal-window" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+      <%= render 'new' %>
     </div>
   </div>
