@@ -1,0 +1,8 @@
+<%= form_for(@form, remote: true) do |f| %>
+  <h3>Nouveau formulaire</h3>
+  <div class="form-group">
+    <%= f.label :type, 'Type de formulaire' %>
+    <%= f.collection_select :type_id, @types, :id, :label, {}, class: 'form-control' %>
+  </div>
+  <%= f.submit 'Création', class: 'btn btn-primary' %>
+<% end %>
