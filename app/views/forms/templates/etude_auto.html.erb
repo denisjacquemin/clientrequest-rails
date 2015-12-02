@@ -1,0 +1,544 @@
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Etude Auto
+                <small></small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Map Column -->
+        <div class="col-md-8">
+          <form>
+            <div class="panel panel-default">
+              <div class="panel-heading">Renseignements Chauffeur</div>
+              <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="firstname">firstname</label>
+                          <input type="text" class="form-control" id="firstname">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="lastname">Lastname</label>
+                        <input type="text" class="form-control" id="lastname">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="birthdate">Brithdate</label>
+                        <input type="text" class="form-control" id="birthdate">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="address">Address</label>
+                      <input type="text" class="form-control" id="address">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input type="text" class="form-control" id="phone">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="cell">Cell</label>
+                      <input type="text" class="form-control" id="cell">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="function">Profession</label>
+                      <input type="text" class="form-control" id="function">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="employed">Salarié</label></br>
+                      <label class="radio-inline">
+                        <input type="radio" name="employed" id="inlineRadio1" value="true"> Oui
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="employed" id="inlineRadio2" value="false"> Non
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="nationalregisternumber">Numéro registre national</label>
+                      <input type="text" class="form-control" id="nationalregisternumber">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="licensedate">Date de permis de conduire</label>
+                      <input type="text" class="form-control" id="licensedate">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                      <label for="morethanadriver" class="col-sm-5 control-label">Plus d'un conducteur?</label>
+                      <div class="col-sm-7">
+                        <label class="radio-inline">
+                          <input type="radio" name="morethanadriver" id="morethanadrivertrue" value="true"> Oui
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="morethanadriver" id="morethanadriverfalse" value="false"> Non
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="otherdriverdetails" class="hidden">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="seconddriverfirstname">Nom</label>
+                        <input type="text" class="form-control" id="seconddriverfirstname">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="seconddriverlastname">Prenom</label>
+                        <input type="text" class="form-control" id="seconddriverlastname">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="seconddriverzipcode">Code postal</label>
+                        <input type="text" class="form-control" id="seconddriverzipcode">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="seconddriverbirthdate">Date de naissance</label>
+                        <input type="text" class="form-control" id="seconddriverbirthdate">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="seconddriverlicensedate">Date de permis</label>
+                        <input type="text" class="form-control" id="seconddriverlicensedate">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                      <label for="numberofcarinhouse" class="col-sm-7 control-label">Combien de vehicule possédez-vous dans votre ménage?</label>
+                      <div class="col-sm-5">
+                        <input type="text" class="form-control" id="numberofcarinhouse">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                      <label for="lessthan23driver" class="col-sm-5 control-label">Conducteur de moins de 23 ans?</label>
+                      <div class="col-sm-7">
+                        <label class="radio-inline">
+                          <input type="radio" name="lessthan23driver" value="true"> Oui
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="lessthan23driver" value="false"> Non
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-horizontal">
+                    <div class="form-group">
+                      <label for="lessthan23driveroften" class="col-sm-5 control-label">Habituel?</label>
+                      <div class="col-sm-7">
+                        <label class="radio-inline">
+                          <input type="radio" name="lessthan23driveroften" value="true"> Oui
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="lessthan23driveroften" value="false"> Non
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">Antécédents sinistres durant les 5 dernières années</div>
+              <div class="panel-body form-horizontal">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="numberofcrashguilty" class="col-sm-4 control-label">Nombre(s) de sinistre(s) en tort</label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="numberofcrashguilty">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="numberofcrashnotguilty" class="col-sm-4 control-label">Nombre(s) de sinistre(s) en droit</label>
+                          <div class="col-sm-8">
+                            <input type="text" class="form-control" id="numberofcrashnotguilty">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="numberofcrashnotomnium" class="col-sm-5 control-label">Nombre(s) de sinistre(s) en (mini) omnium</label>
+                          <div class="col-sm-7">
+                            <input type="text" class="form-control" id="numberofcrashnotguilty">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="crashcontext" class="col-sm-4 control-label">Circonstances et débours</label>
+                          <div class="col-sm-8">
+                            <textarea rows="3" class="form-control" id="crashcontext"></textarea>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="licensewidthdaw" class="col-sm-4 control-label">Retrait(s) de permis</label>
+                          <div class="col-sm-8">
+                            <label class="radio-inline">
+                              <input type="radio" name="licensewidthdaw" id="licensewidthdawtrue" value="true"> Oui
+                            </label>
+                            <label class="radio-inline">
+                              <input type="radio" name="licensewidthdaw" id="licensewidthdawfalse" value="false"> Non
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="licensewidthdawexplanation" class="col-sm-4 control-label">Cause(s)</label>
+                          <div class="col-sm-8">
+                            <textarea rows="3" class="form-control" id="licensewidthdawexplanation"></textarea>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">Informations sur le véhicule</div>
+              <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="carbrand">Marque</label>
+                          <input type="text" class="form-control" id="carbrand">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cartype">Type</label>
+                        <input type="text" class="form-control" id="cartype">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="carkw">KW</label>
+                          <input type="text" class="form-control" id="carkw">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="carcarburant">Carburant</label>
+                        <input type="text" class="form-control" id="carcarburant">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="employed">Type de véhicule</label></br>
+                          <label class="radio-inline">
+                            <input type="radio" name="carnewold" id="carnewold1" value="new"> Neuf
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="carnewold" id="carnewold2" value="direction"> Direction
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="carnewold" id="carnewold2" value="occasion"> Occasion
+                          </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="cabriolet">Cabriolet</label>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Non
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Non</a></li>
+                            <li><a href="#">Bâché</a></li>
+                            <li><a href="#">Tôlé</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="sport">Sportif</label></br>
+                          <label class="radio-inline">
+                            <input type="radio" name="sport" id="sport1" value="true"> Oui
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="sport" id="sport2" value="false"> Non
+                          </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="platenumber">Numero de plaque</label>
+                        <input type="text" class="form-control" id="platenumber">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="chassisnumber">Numero de châssis</label>
+                          <input type="text" class="form-control" id="chassisnumber">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="garage">Garage</label></br>
+                        <label class="radio-inline">
+                          <input type="radio" name="garage" id="garage1" value="true"> Oui
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="garage" id="garage2" value="false"> Non
+                        </label>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="carvaluehtva">Valeur catalogue HTVA hors ristournes</label>
+                          <input type="text" class="form-control" id="carvaluehtva">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="carvaluehristournes">Avec ristournes</label>
+                        <input type="text" class="form-control" id="carvaluehristournes">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="kmperyear">KM parcouru par année</label>
+                          <input type="text" class="form-control" id="kmperyear">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="carkm">KM compteur</label>
+                        <input type="text" class="form-control" id="carkm">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="alarmetype">Type d'alarme</label>
+                          <input type="text" class="form-control" id="alarmetype">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="currentasscompany">Compagnie actuelle</label>
+                          <input type="text" class="form-control" id="currentasscompany">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="currentasscompanysincewhen">Depuis combien d'année dans cette compagnie</label>
+                        <input type="text" class="form-control" id="currentasscompanysincewhen">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="contractnumber">Numéro du contrat</label>
+                          <input type="text" class="form-control" id="contractnumber">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="otherasscompany">Autres compagnies (si < 5)</label>
+                        <input type="text" class="form-control" id="otherasscompany">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Garanties actuelles</h4>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">RC
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">PJ Compagnie
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">PJ Compagnie spécialisée
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">Omnium valeur agréée ou vénale
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">Mini omnium valeur agréée ou vénale
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">Assistance
+                          </label>
+                        </div>
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" value="">Conducteur individuelle circulation
+                          </label>
+                        </div>
+                        <div class="form-group">
+                          <label for="currentassother">Autres</label>
+                          <input type="text" class="form-control" id="currentassother">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Garanties souhaitées</h4>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">RC
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">PJ Compagnie spécialisée
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">Omnium valeur agréée ou vénale
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">Mini omnium valeur agréée ou vénale
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">Assistance
+                        </label>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" value="">Conducteur individuelle circulation
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <label for="wishassother">Autres</label>
+                        <input type="text" class="form-control" id="wishassother">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="contractnumber">Tarif actuel</label>
+                          <input type="text" class="form-control" id="contractnumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Details Column -->
+        <div class="col-md-4">
+          <%= render 'send_by_email_form' %>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
