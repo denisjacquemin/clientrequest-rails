@@ -6,6 +6,8 @@ class Form < ActiveRecord::Base
   scope :by_author, ->(author_id) { where("author_id = ?", author_id) }
   scope :by_company, ->(company_id) { where("company_id = ?", company_id) }
 
+  validates :type_id, :uid, :company_id, :author_id, presence: true
+
   def to_param
     uid
   end
