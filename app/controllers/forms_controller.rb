@@ -31,7 +31,7 @@ class FormsController < ApplicationController
     @form.uid = '98934j3493434jk43s'
 
     if @form.save
-      render 'create_redirect_to_show.js.erb' # redirect to show screen
+      redirect_to form_url(@form.uid) # redirect to show screen
     else
       @types = FormType.all
       render :new
