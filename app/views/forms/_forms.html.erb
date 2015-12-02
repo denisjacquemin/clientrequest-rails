@@ -1,0 +1,8 @@
+<% @forms.each do |form| %>
+  <tr>
+    <td><%= form.author.email %></td>
+    <td><%= form.type.label %></td>
+    <td><%= link_to "Show", form %></td>
+    <td><%= link_to "Remove", form, method: :delete, data: { confirm: "Are you sure?" } %></td>
+  </tr>
+<% end %>
