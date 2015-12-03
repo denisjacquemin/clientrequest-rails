@@ -9,6 +9,7 @@ class FormsController < ApplicationController
 
   def show
     @form = Form.find_by_uid(params[:id])
+    @message = Message.new
     render "forms/templates/#{@form.type.filename}"
   end
 
@@ -39,18 +40,25 @@ class FormsController < ApplicationController
   end
 
   def send_by_email
-    @message = Form.new(params[:message])
-    byebug
+    @message = Message.new(message_params)
+    @message.save
+    
     FormMailer.send_form_email(@message).deliver_later
   end
 
-
+  def emails_sent
+    @messages = Message.all
+  end
 
   private
 
      # Never trust parameters from the scary internet, only allow the white list through.
      def form_params
        params.require(:form).permit(:type_id, :email, :message)
+     end
+
+     def message_params
+       params.require(:message).permit(:email, :content, :author_id, :form_uid, :form_as_pdf)
      end
 
 end

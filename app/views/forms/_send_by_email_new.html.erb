@@ -1,0 +1,23 @@
+<%= form_for @message, url: {action: "send_by_email"}, remote: true do |f| %>
+  <%= f.hidden_field :form_uid, value: @form.uid%>
+  <%= f.hidden_field :author_id, value: @form.author.id %>
+  <h3>Envoyer ce formulaire</h3>
+  <div class="form-group">
+    <div class="row">
+        <div class="col-md-6"><%= f.label :email, 'Email' %></div>
+        <div class="col-md-6 text-right"><%= link_to 'client' %> | <%= link_to 'backoffice' %></div>
+    </div>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :content, 'Message' %>
+    <%= f.text_area :content, class: 'form-control', rows: '8' %>
+  </div>
+  <div class="checkbox">
+    <label>
+      <%= f.check_box :form_as_pdf %> Joindre le formulaire en pdf
+    </label>
+  </div>
+  <%= f.submit 'Envoyer', class: 'btn btn-primary' %>
+<% end %>
+<%= render 'emails_sent_list' %>

@@ -1,0 +1,3 @@
+<% Message.all.each do |m| %>
+  <tr><td><%= m.created_at.strftime("%d/%m/%Y %H:%M") %></td><td><em><%= m.email %></td></tr>
+<% end %>
