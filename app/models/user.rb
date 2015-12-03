@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   belongs_to :company, dependent: :destroy
   has_many :forms, dependent: :destroy
-
+  has_many :messages, dependent: :destroy
 
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
