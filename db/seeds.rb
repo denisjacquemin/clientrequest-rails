@@ -12,5 +12,5 @@ Company.create(name: 'Company 2')
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
-FormType.create(label: 'Etude auto', filename: 'etude_auto')
+FormType.create(label: 'Etude auto', filename: 'etude_auto/etude_auto')
 FormType.create(label: 'Etude Incendie', filename: 'etude_incendie')
