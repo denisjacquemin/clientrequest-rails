@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <%= @message.content %>
-  </body>
-</html>
+<%= @message.content %>
+<br>
+<%= link_to @message.form.type.label, @message.form %>

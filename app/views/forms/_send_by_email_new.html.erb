@@ -1,5 +1,5 @@
 <%= form_for @message, url: {action: "send_by_email"}, remote: true do |f| %>
-  <%= f.hidden_field :form_uid, value: @form.uid%>
+  <%= f.hidden_field :form_id, value: @form.id%>
   <%= f.hidden_field :author_id, value: @form.author.id %>
   <h3>Envoyer ce formulaire</h3>
   <div class="form-group">
