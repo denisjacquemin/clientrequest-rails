@@ -42,7 +42,7 @@ class FormsController < ApplicationController
   def send_by_email
     @message = Message.new(message_params)
     @message.save
-    
+
     FormMailer.send_form_email(@message).deliver_later
   end
 
@@ -58,7 +58,7 @@ class FormsController < ApplicationController
      end
 
      def message_params
-       params.require(:message).permit(:email, :content, :author_id, :form_uid, :form_as_pdf)
+       params.require(:message).permit(:email, :content, :author_id, :form_id, :form_as_pdf)
      end
 
 end

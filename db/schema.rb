@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20151202135642) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "author_id"
-    t.string  "form_uid"
+    t.integer  "form_id"
     t.boolean  "form_as_pdf"
   end
 
