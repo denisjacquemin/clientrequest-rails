@@ -10,6 +10,7 @@ class FormsController < ApplicationController
   def show
     @form = Form.find_by_uid(params[:id])
     @message = Message.new
+    @messages = Message.by_form(@form.id)
     render "forms/templates/#{@form.type.filename}"
   end
 
@@ -27,9 +28,9 @@ class FormsController < ApplicationController
 
     @form.author_id = current_user.id
     @form.company_id = current_user.company_id
-    # new_firebase_form_key = FirebaseRef.push('forms', {}) # generate new firebase key (form.uid) under /forms path
-    # @form.uid = new_firebase_form_key.body['name'] # assign key as uid form
-    @form.uid = '98934j3493434jk43s'
+    new_firebase_form_key = FirebaseRef.push('forms', {}) # generate new firebase key (form.uid) under /forms path
+    @form.uid = new_firebase_form_key.body['name'] # assign key as uid form
+    #@form.uid = '98934j3493434jk43s' + Date.new().to_s
 
     if @form.save
       redirect_to form_url(@form.uid) # redirect to show screen
@@ -39,16 +40,18 @@ class FormsController < ApplicationController
     end
   end
 
-  def send_by_email
+  def create_send_form_message
     @message = Message.new(message_params)
     @message.save
+    @messages = Message.by_form(@message.form_id)
+
 
     FormMailer.send_form_email(@message).deliver_later
   end
 
-  def emails_sent
-    @messages = Message.all
-  end
+  # def emails_sent_by_form
+  #   @messages = Message.by_form(params[:form_id])
+  # end
 
   private
 
