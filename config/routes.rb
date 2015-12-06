@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :forms
-  post 'forms/send_by_email', to: 'forms#send_by_email', as: 'send_by_email'
-  get 'forms/emails_sent', to: 'forms#emails_sent', as: 'emails_sent'
+  post 'forms/create_send_form_message', to: 'forms#create_send_form_message'
+  get 'forms/emails_sent_by_form', to: 'forms#emails_sent_by_form'
 
   mount Upmin::Engine => '/admin'
   root to: 'visitors#index'

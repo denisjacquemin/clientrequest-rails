@@ -1,0 +1,13 @@
+<% if @messages.size > 0 %>
+  <table class="table" id="emails_sent">
+    <thead>
+      <tr>
+        <th>Email envoyé le</th>
+        <th>Destinataire</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: 'message', collection: @messages %>
+    </tbody>
+  </table>
+<% end %>
