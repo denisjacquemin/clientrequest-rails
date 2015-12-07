@@ -7,6 +7,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'firebase', '~> 0.2.5'
+gem 'wicked_pdf', '~> 1.0', '>= 1.0.3'
+gem 'wkhtmltopdf-binary-edge', '~> 0.12.2.1'
 gem 'jbuilder', '~> 2.0'
 group :development, :test do
   gem 'byebug'
