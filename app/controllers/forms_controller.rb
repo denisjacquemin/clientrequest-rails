@@ -1,5 +1,5 @@
 class FormsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
 
   def index
     @forms = Form.all.by_company(current_user.company_id)
