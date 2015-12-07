@@ -11,7 +11,18 @@ class FormsController < ApplicationController
     @form = Form.find_by_uid(params[:id])
     @message = Message.new
     @messages = Message.by_form(@form.id)
-    render "forms/templates/#{@form.type.filename}"
+
+    respond_to do |format|
+      format.html do
+        render "forms/templates/#{@form.type.filename}"
+      end
+      format.pdf do
+        render :pdf => "file_name",
+               :template => "forms/templates/#{@form.type.filename}",
+               :layout => "application_pdf.html.erb",
+               :javascript_delay => 2000
+      end
+    end
   end
 
   def new
