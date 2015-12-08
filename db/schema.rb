@@ -38,11 +38,11 @@ ActiveRecord::Schema.define(version: 20151202135642) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string   "email"
+    t.string   "to"
     t.text     "content"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "author_id"
+    t.string  "from"
     t.integer  "form_id"
     t.boolean  "form_as_pdf"
   end
