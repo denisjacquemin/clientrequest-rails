@@ -1,5 +1,5 @@
 class FormsController < ApplicationController
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :create_send_form_message]
 
   def index
     @forms = Form.all.by_company(current_user.company_id)
@@ -39,9 +39,9 @@ class FormsController < ApplicationController
 
     @form.author_id = current_user.id
     @form.company_id = current_user.company_id
-    new_firebase_form_key = FirebaseRef.push('forms', {}) # generate new firebase key (form.uid) under /forms path
-    @form.uid = new_firebase_form_key.body['name'] # assign key as uid form
-    #@form.uid = '98934j3493434jk43s' + Date.new().to_s
+    # new_firebase_form_key = FirebaseRef.push('forms', {}) # generate new firebase key (form.uid) under /forms path
+    # @form.uid = new_firebase_form_key.body['name'] # assign key as uid form
+    @form.uid = '98934j3493434jk43s' + Date.new().to_s
 
     if @form.save
       redirect_to form_url(@form.uid) # redirect to show screen
@@ -72,7 +72,7 @@ class FormsController < ApplicationController
      end
 
      def message_params
-       params.require(:message).permit(:email, :content, :author_id, :form_id, :form_as_pdf)
+       params.require(:message).permit(:to, :content, :from, :form_id, :form_as_pdf)
      end
 
 end
