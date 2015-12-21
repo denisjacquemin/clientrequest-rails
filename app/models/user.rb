@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   belongs_to :company, dependent: :destroy
-  has_many :forms, dependent: :destroy
-  has_many :messages, dependent: :destroy
+  has_many :forms, foreign_key: 'author_id', dependent: :destroy
+  has_many :messages, foreign_key: 'author_id', dependent: :destroy
 
   enum role: [:user, :vip, :admin]
   after_initialize :set_default_role, :if => :new_record?
@@ -14,4 +14,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def invitation_status
+    if self.invitation_accepted_at
+      return "Invitation acceptée le #{self.invitation_accepted_at.strftime('%d/%m/%Y')}"
+    else
+      return "Invitation pas encore acceptée"
+    end
+  end
 end
