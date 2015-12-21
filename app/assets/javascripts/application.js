@@ -16,3 +16,4 @@
 //= require bootstrap-sprockets
 //= require firebase_2.3.2
 //= require_tree .
+//= stub forms_templates/for_pdf.js
