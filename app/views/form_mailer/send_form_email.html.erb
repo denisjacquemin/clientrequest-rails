@@ -1,3 +1,5 @@
 <%= simple_format @message.content %>
 <br>
-<%= link_to @message.form.type.label, @message.form %>
+<% unless @message.form_as_pdf %>
+  <%= link_to @message.form.type.label, @message.form %>
+<% end %>
