@@ -1,0 +1,9 @@
+<%= form_for @user, url: user_invitation_path, remote: true do |f| %>
+  <h3>Invitation</h3>
+<div class="form-group">
+  <div class="form-group">
+    <%= f.label :email, 'Email' %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+  <%= f.submit 'Envoyer', class: 'btn btn-primary btn-block' %>
+<% end %>
