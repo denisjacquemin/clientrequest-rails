@@ -1,0 +1,240 @@
+<script>
+var data = <%= raw @data %>
+</script>
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Etude Auto
+                <small></small>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Renseignements Chauffeur</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Prénom</dt><dd id="1"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Nom</dt><dd id="2"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Date de naissance</dt><dd id="3"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Email</dt><dd id="4"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <dl><dt>Adresse</dt><dd id="5"></dd></dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Téléphone fixe</dt><dd id="6"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Téléphone portable</dt><dd id="7"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Profession</dt><dd id="8"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Salarié</dt><dd id="9"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Numéro registre national</dt><dd id="10"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Date de permis de conduire</dt><dd id="11"></dd></dl></div>
+    </div>
+    <div class="bg-grey">
+      <div class="row">
+        <div class="col-xs-12">
+          <dl><dt>Plus d'un conducteur?</dt><dd id="12"></dd></dl>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6"><dl><dt>Prénom</dt><dd id="13"></dd></dl></div>
+        <div class="col-xs-6"><dl><dt>Nom</dt><dd id="14"></dd></dl></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6"><dl><dt>Code postal</dt><dd id="15"></dd></dl></div>
+        <div class="col-xs-6"><dl><dt>Date de naissance</dt><dd id="16"></dd></dl></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <dl><dt>Date de permis</dt><dd id="17"></dd></dl>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <dl><dt>Combien de vehicule possédez-vous dans votre ménage?</dt><dd id="18"></dd></dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Conducteur de moins de 23 ans?</dt><dd id="19"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Habituel?</dt><dd id="20"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <dl><dt>Antécédents sinistres durant les 5 dernières années</dt><dd id="21"></dd></dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <dl><dt>Nombre(s) de sinistre(s) en tort</dt><dd id="21"></dd></dl>
+      </div>
+      <div class="col-xs-6">
+        <dl><dt>Nombre(s) de sinistre(s) en droit</dt><dd id="22"></dd></dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <dl><dt>Nombre(s) de sinistre(s) en (mini) omnium</dt><dd id="23"></dd></dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <dl><dt>Circonstances et débours</dt><dd id="24"></dd></dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <dl><dt>Retrait(s) de permis</dt><dd id="25"></dd></dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <dl><dt>Cause(s)</dt><dd id="26"></dd></dl>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Informations sur le véhicule</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Marque</dt><dd id="27"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Type</dt><dd id="28"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>KW</dt><dd id="29"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Carburant</dt><dd id="30"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Type de véhicule</dt><dd id="31"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Cabriolet</dt><dd id="32"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Sportif</dt><dd id="33"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Numéro de plaque</dt><dd id="34"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Numero de châssis</dt><dd id="35"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Garage</dt><dd id="36"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Valeur catalogue HTVA hors ristournes</dt><dd id="37"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Avec ristournes</dt><dd id="38"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>KM parcouru par année</dt><dd id="39"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>KM compteur</dt><dd id="40"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Type d'alarme</dt><dd id="41"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Compagnie actuelle</dt><dd id="42"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6"><dl><dt>Depuis combien d'année dans cette compagnie</dt><dd id="43"></dd></dl></div>
+      <div class="col-xs-6"><dl><dt>Numéro du contrat</dt><dd id="44"></dd></dl></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12"><dl><dt>Autres compagnies (si < 5)</dt><dd id="45"></dd></dl></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <h4>Garanties actuelles</h4>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="46" value="rc">RC
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="47" value="pjcompagnie">PJ Compagnie
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="48" value="pjcompagniespec">PJ Compagnie spécialisée
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="49" value="omnium">Omnium valeur agréée ou vénale
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="50" value="miniomnium">Mini omnium valeur agréée ou vénale
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="51" value="assistance">Assistance
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="52" value="conducteurindividuellecirculation">Conducteur individuelle circulation
+              </label>
+            </div>
+            <div class="form-group">
+              <div class="form-group">
+                <dl><dt>Autres</dt><dd id="53"></dd></dl>
+              </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+          <h4>Garanties souhaitées</h4>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="54" value="rc">RC
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="55" value="pjcompagniespec">PJ Compagnie spécialisée
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="56" value="omnium">Omnium valeur agréée ou vénale
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="57" value="miniomnium">Mini omnium valeur agréée ou vénale
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="58" value="assistance">Assistance
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="59" value="conducteurindividuelle">Conducteur individuelle circulation
+            </label>
+          </div>
+          <div class="form-group">
+            <dl><dt>Autres</dt><dd id="60"></dd></dl>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12"><dl><dt>Tarif actuel</dt><dd id="61"></dd></dl></div>
+    </div>
+
+</div>
+<!-- /.container -->
