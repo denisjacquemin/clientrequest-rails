@@ -1,12 +1,11 @@
 <% if current_user %>
   <%= form_for @message, url: {action: "create_send_form_message"}, remote: true do |f| %>
     <%= f.hidden_field :form_id, value: @form.id%>
-    <%= f.hidden_field :from, value: @form.author.email %>
     <h3>Envoyer ce formulaire</h3>
     <div class="form-group">
       <div class="row">
           <div class="col-md-6"><%= f.label :to, 'Email' %></div>
-          <div class="col-md-6 text-right"><%= link_to 'client' %> | <%= link_to 'backoffice' %></div>
+          <!--<div class="col-md-6 text-right"><%= link_to 'client' %> | <%= link_to 'backoffice' %></div>-->
       </div>
       <%= f.text_field :to, class: 'form-control' %>
     </div>
