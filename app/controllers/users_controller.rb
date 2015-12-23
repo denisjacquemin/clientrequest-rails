@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @user = User.new
     authorize User
   end
 
@@ -29,10 +30,22 @@ class UsersController < ApplicationController
     redirect_to users_path, :notice => "User deleted."
   end
 
+  def create_invitation
+    @user = User.new(new_invitation_params)
+    @user.invited_by_id = current_user.id
+    @user.invitation_created_at = Date.new
+    @user.invitation_token = 'token' #todo generate token
+  
+  end
+
   private
 
   def secure_params
     params.require(:user).permit(:role)
+  end
+
+  def new_invitation_params
+    params.require(:user).permit(:email)
   end
 
 end
