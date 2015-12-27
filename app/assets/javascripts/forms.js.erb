@@ -8,7 +8,6 @@ $(document).on('ready page:load', function () {
   var form_uid = $('#form_uid').val();
   if (form_uid != undefined) {
     firebaseRef.child('forms').child(form_uid).on('value', function(snap) {
-      console.log('is snap an array? ' + snap.val().constructor === Array)
       snap.forEach(function(childSnapshot) {
         var selector = '#' + childSnapshot.key();
         var elem = $(selector)
