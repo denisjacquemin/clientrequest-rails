@@ -52,7 +52,7 @@ class FormsController < ApplicationController
 
     @form.author_id = current_user.id
     @form.company_id = current_user.company_id
-    new_firebase_form_key = FirebaseRef.push('forms', {}) # generate new firebase key (form.uid) under /forms path
+    new_firebase_form_key = FirebaseRef.push('forms', {'meta': { 'company_id': @form.company_id} }) # generate new firebase key (form.uid) under /forms path
     @form.uid = new_firebase_form_key.body['name'] # assign key as uid form
     #@form.uid = '98934j3493434jk43s' + Date.new().to_s
 
