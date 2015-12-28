@@ -1,0 +1,8 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Export PDF</div>
+  <div class="panel-body">
+    <%= link_to form_path(@form, format: :pdf) do %>
+      <i class="fa fa-file-pdf-o"></i> <%= @form.type.label %>.pdf
+    <% end %>
+  </div>
+</div>
