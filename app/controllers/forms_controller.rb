@@ -21,12 +21,12 @@ class FormsController < ApplicationController
         end
       end
       format.pdf do
-        # data = WickedPdf.new.pdf_from_url(show_for_pdf_url(@form.uid))
-        # send_data( data, :filename => "#{@form.type.label}.pdf" )
-        render :pdf => "file_name",
-               :template => "forms/templates/#{@form.type.filename}",
-               :layout => "application_pdf.html.erb",
-               :javascript_delay => 2000
+        data = WickedPdf.new.pdf_from_url(show_for_pdf_url(@form.uid))
+        send_data( data, :filename => "#{@form.type.label}.pdf" )
+        # render :pdf => "file_name",
+        #        :template => "forms/templates/#{@form.type.filename}",
+        #        :layout => "application_pdf.html.erb",
+        #        :javascript_delay => 2000
       end
     end
   end
