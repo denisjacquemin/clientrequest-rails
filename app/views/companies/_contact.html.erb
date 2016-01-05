@@ -1,0 +1,20 @@
+<h3><%= @company.name %></h3>
+<p>
+    <%= "#{@company.number} #{@company.street}" %> <br><%= "#{@company.zip}, #{@company.city}" %><br>
+</p>
+<% if @company.phone.present? %>
+  <p>
+    <i class="fa fa-phone"></i>
+    <abbr title="Phone">P</abbr>: <%= @company.phone %>
+  </p>
+<% end %>
+<% if @company.email.present? %>
+  <p><i class="fa fa-envelope-o"></i>
+      <abbr title="Email">E</abbr>: <a href="mailto:<%= @company.email %>"><%= @company.email %></a>
+  </p>
+<% end %>
+<% if @company.open_hours.present? %>
+  <p><i class="fa fa-clock-o"></i>
+      <abbr title="Hours">H</abbr>: <%= @company.open_hours %>
+  </p>
+<% end %>
