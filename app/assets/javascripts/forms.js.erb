@@ -1,9 +1,8 @@
 // save forms data into firebase
 
 
-var firebaseRef = new Firebase("<%= ENV['FIREBASE_URI'] %>");
-
 $(document).on('ready page:load', function () {
+  var firebaseRef = new Firebase("<%= ENV['FIREBASE_URI'] %>");
 
   var form_uid = $('#form_uid').val();
   if (form_uid != undefined) {

@@ -11,6 +11,7 @@ class FormsController < ApplicationController
     @form = Form.find_by_uid(params[:id])
     @message = Message.new
     @messages = Message.by_form(@form.id)
+    @company = @form.company
 
     respond_to do |format|
       format.html do
