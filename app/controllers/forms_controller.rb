@@ -16,15 +16,34 @@ class FormsController < ApplicationController
     respond_to do |format|
       format.html do
         if (params[:as_pdf])
-          render "forms/templates/#{@form.type.filename}_pdf",  :layout => "application_pdf.html.erb"
+          render "forms/templates/#{@form.type.filename}_pdf",
+                 :layout => "application_pdf.html.erb"
         else
           render "forms/templates/#{@form.type.filename}"
         end
       end
       format.pdf do
-        data = WickedPdf.new.pdf_from_url(show_for_pdf_url(@form.uid))
+        options = {
+          header: {
+            left: Time.now.strftime("%d-%m-%Y"),
+            center: "#{@form.company.name}",
+            right: '[page] / [topage]'
+          },
+
+          footer: {
+            center: "#{@form.company.number} #{@form.company.street} #{@form.company.zip} #{@form.company.city} - #{@form.company.phone}"
+          }
+          #
+          # footer: {
+          #   html: {
+          #     template:'templates/footer.html.erb'
+          #   }
+          # }
+        }
+
+        data = WickedPdf.new.pdf_from_url(show_for_pdf_url(@form.uid), options)
         send_data( data, :filename => "#{@form.type.label}.pdf" )
-        # render :pdf => "file_name",
+        #render :pdf => "file_name",
         #        :template => "forms/templates/#{@form.type.filename}",
         #        :layout => "application_pdf.html.erb",
         #        :javascript_delay => 2000
@@ -36,7 +55,8 @@ class FormsController < ApplicationController
     @form = Form.find_by_uid(params[:id])
     res = FirebaseRef.get "/forms/#{@form.uid}"
     @data = res.body.to_json
-    render "forms/templates/#{@form.type.filename}_pdf",  :layout => "application_pdf.html.erb"
+    render "forms/templates/#{@form.type.filename}_pdf",
+           layout: "application_pdf.html.erb"
   end
 
   def new
