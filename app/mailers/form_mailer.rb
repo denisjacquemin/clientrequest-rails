@@ -3,6 +3,7 @@ class FormMailer < ApplicationMailer
     @message = message
     company = @message.form.company
     options = {
+      title: @message.form.type.label,
       header: {
         left: Time.now.strftime("%d-%m-%Y"),
         center: "#{company.name}",

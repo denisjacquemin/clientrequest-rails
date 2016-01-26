@@ -24,6 +24,7 @@ class FormsController < ApplicationController
       end
       format.pdf do
         options = {
+          title: @form.type.label,
           header: {
             left: Time.now.strftime("%d-%m-%Y"),
             center: "#{@form.company.name}",
