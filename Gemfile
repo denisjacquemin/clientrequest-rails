@@ -21,6 +21,7 @@ end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise_invitable'
+gem 'devise-async'
 gem 'high_voltage'
 gem 'pundit'
 gem 'puma'
