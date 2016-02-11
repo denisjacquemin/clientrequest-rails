@@ -26,12 +26,14 @@ class FormsController < ApplicationController
         options = {
           title: @form.type.label,
           header: {
+            font_size: 8,
             left: Time.now.strftime("%d-%m-%Y"),
             center: "#{@form.company.name}",
             right: '[page] / [topage]'
           },
 
           footer: {
+            font_size: 8,
             center: "#{@form.company.number} #{@form.company.street} #{@form.company.zip} #{@form.company.city} - #{@form.company.phone}"
           }
           #

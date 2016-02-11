@@ -5,11 +5,13 @@ class FormMailer < ApplicationMailer
     options = {
       title: @message.form.type.label,
       header: {
+        font_size: 8,
         left: Time.now.strftime("%d-%m-%Y"),
         center: "#{company.name}",
         right: '[page] / [topage]'
       },
       footer: {
+        font_size: 8,
         center: "#{company.number} #{company.street} #{company.zip} #{company.city} - #{company.phone}"
       }
     }
