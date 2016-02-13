@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   belongs_to :company, dependent: :destroy
   has_many :forms, foreign_key: 'author_id', dependent: :destroy
   has_many :messages, foreign_key: 'author_id', dependent: :destroy
@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable, :confirmable,
-         :recoverable, :rememberable, :trackable, :validatable, :async
+         :recoverable, :rememberable, :trackable, :validatable
 
   def invitation_status
     if self.invitation_accepted_at
