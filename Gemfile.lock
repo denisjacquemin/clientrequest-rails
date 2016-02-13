@@ -19,6 +19,13 @@ GIT
       actionmailer (>= 3.2.6, < 5)
       devise (>= 3.2.0)
 
+GIT
+  remote: git://github.com/thoughtbot/high_voltage.git
+  revision: 32ae7427ebd752de421322a7876adada445aad1a
+  branch: master
+  specs:
+    high_voltage (2.4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -102,7 +109,6 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.7)
       tilt
-    high_voltage (2.4.0)
     httpclient (2.7.1)
     hub (1.12.4)
     i18n (0.7.0)
@@ -243,7 +249,7 @@ DEPENDENCIES
   devise-i18n-views
   devise_invitable!
   firebase (~> 0.2.5)
-  high_voltage
+  high_voltage!
   hub
   jbuilder (~> 2.0)
   jquery-rails
